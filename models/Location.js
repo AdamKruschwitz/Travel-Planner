@@ -17,8 +17,11 @@ Location.init(
         }
     },
     {
+        freezeTableName: true,
         sequelize,
         timestamps: false,
         modelName: 'location'
     }
 )
+
+module.exports = Location;

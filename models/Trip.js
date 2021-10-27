@@ -26,7 +26,7 @@ Trip.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "traveler",
+                model: "traveller",
                 key: "id"
             }
         },
@@ -40,8 +40,10 @@ Trip.init(
         }
     },
     {
+        freezeTableName: true,
         sequelize,
         timestamps: false,
         modelName: 'trip'
     }
 )
+module.exports = Trip;
